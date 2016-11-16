@@ -10,7 +10,7 @@
         var vm = this;
         vm.tableMode = false;
         vm.toggleTableMode = toggleTableMode;
-        $stateParams = {"token": "beabdb65"};
+        //$stateParams = {"token": "beabdb65"};
 
         loadData();
 

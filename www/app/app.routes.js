@@ -17,7 +17,7 @@
 		})
 
 		.state('charts', {
-			url: '/charts',
+			url: '/charts/:token',
 			templateUrl: 'app/components/charts/charts.view.html',
 			controller: 'ChartsController',
 			controllerAs: 'vm'

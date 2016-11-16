@@ -51,6 +51,7 @@
                         return prev;
                         }, 0);
                         data[index][year - 1] = (average / count).toFixed(1);
+                        count = 0;
                     }
                 });
 

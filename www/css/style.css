@@ -61,10 +61,6 @@
 	margin: 30px auto;
 }
 
-.charts-box {
-	
-}
-
 .charts-box .charts-black-box {
     margin: 30px auto;
     -moz-box-shadow: 0 0 20px #000;
@@ -87,11 +83,24 @@
 	margin-bottom: 40px;
 }
 
-.charts-table, .dataTables_filter {
-	color: #fff !important;
+.charts-table {
+	color: #fff;
 	font-weight: 700;
+}
+
+.dataTables_filter > label {
+	color: #fff;
+}
+
+.dataTables_filter > label input {
+	color: #000;
+	margin-left: 5px;
 }
 
 .charts-table-header {
 	text-transform: capitalize;
+}
+
+table.dataTable thead th {
+	padding-left: 5px;
 }
