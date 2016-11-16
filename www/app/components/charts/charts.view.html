@@ -1,0 +1,69 @@
+<div class="container charts-page">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row charts-box">
+				<div class="col-md-12">
+					<div class="charts-black-box">
+						<h1 class="charts-title">Acessos por Browser</h1>
+						<div ng-if="!vm.tableMode">
+							<canvas id="browserAccess" class="chart chart-pie"
+								chart-data="vm.browserAccess.chart.data" chart-labels="vm.browserAccess.chart.labels">
+							</canvas> 
+						</div>
+						<div ng-if="vm.browserAccess.table.options && vm.browserAccess.table.columns && vm.tableMode">
+							<table datatable="" dt-options="vm.browserAccess.table.options" dt-columns="vm.browserAccess.table.columns" class="row-border hover charts-table">
+								<thead class="charts-table-header">
+									<!--builted using javascript due bug in angular-datatable + ng-repeat in same tag-->
+								</thead>
+								<tbody>
+									<tr ng-repeat="row in vm.browserAccess.table.options">
+										<td>{{ row.label }}</td>
+										<td>{{ row.value }}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row charts-box city-temperatures-box">
+				<div class="col-md-12">
+					<div class="charts-black-box">
+						<h1 class="charts-title">Temperatura Média (cidade/mês)</h1>
+						<div ng-if="!vm.tableMode">
+							<canvas id="cityTemperatures" class="chart chart-bar"
+								chart-data="vm.cityTemperatures.chart.data" chart-labels="vm.cityTemperatures.chart.labels" chart-series="vm.cityTemperatures.chart.series">
+							</canvas>
+						</div>
+						<div ng-if="vm.cityTemperatures.table.options && vm.cityTemperatures.table.columns && vm.tableMode">
+							<table datatable="" dt-options="vm.cityTemperatures.table.options" dt-columns="vm.cityTemperatures.table.columns" class="row-border hover charts-table">
+								<thead class="charts-table-header">
+									<!--builted using javascript due bug in angular-datatable + ng-repeat in same tag-->
+								</thead>
+								<tbody>
+									<tr ng-repeat="row in vm.cityTemperatures.table.options">
+										<td>{{ row.cidade }}</td>
+										<td>{{ row.janeiro }}</td>
+										<td>{{ row.fevereiro }}</td>
+										<td>{{ row.marco }}</td>
+										<td>{{ row.abril }}</td>
+										<td>{{ row.maio }}</td>
+										<td>{{ row.junho }}</td>
+										<td>{{ row.julho }}</td>
+										<td>{{ row.agosto }}</td>
+										<td>{{ row.setembro }}</td>
+										<td>{{ row.outubro }}</td>
+										<td>{{ row.novembro }}</td>
+										<td>{{ row.dezembro }}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="submit" id="tableMode" class="btn-action" ng-click="vm.toggleTableMode()" ng-init="vm.modeMessage = 'Visualizar em modo Tabela'"> {{ vm.modeMessage }}</button>
+		</div>
+	</div>
+</div>
+
