@@ -27,15 +27,11 @@
 .modal-dialog {
     width: 350px;
     padding: 40px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 2px;
-    box-shadow: 0 5px 20px black;
     top: 30%;
 }
 
 .modal-backdrop {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .overflow-hidden {

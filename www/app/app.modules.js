@@ -1,6 +1,7 @@
 angular.module('test',
 	[
 		'test.run',
+		'test.config',
 		'test.routes',
 
 		'test.signUp.controller',
@@ -16,4 +17,5 @@ angular.module('test',
 		'test.compareTo.directive',
 		
 		'ui.router',
+		'chart.js'
 	]);

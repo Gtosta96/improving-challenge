@@ -1,7 +1,7 @@
 (function(){
     'use strict'
 
-    angular.module('test.charts.controller', ['chart.js'])
+    angular.module('test.charts.controller', [])
     .controller('ChartsController', chartsController);
 
     chartsController.$inject = ['$stateParams', '$q', 'DTOptionsBuilder', 'DTColumnBuilder', 'RestService', 'ChartsService'];

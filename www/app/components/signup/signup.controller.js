@@ -9,6 +9,7 @@
 
         var vm = this;
         vm.submit = submit;
+        vm.fireBug = fireBug;
         vm.contact = {};
         vm.countries = MockService.countries();
 
@@ -21,12 +22,19 @@
                 function onDone(xhr) {
                     $state.go('charts', { token: xhr.token});
                 } 
+            }
+        }
+        
+        //Simula um erro para exibição de Pop-up
+        function fireBug() {
+            RestService.submitContact.save().$promise
+            .catch(onFail);
+        }
 
-                function onFail(xhr) {
-                    AlertService.httpError(xhr);
-                }
-            }            
-        };    
-    };
+        //Funções Globais
+        function onFail(xhr) {
+            AlertService.httpError(xhr);
+        }
+    }
 
 }());
